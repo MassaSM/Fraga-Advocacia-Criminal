@@ -1,0 +1,75 @@
+footer
+    background: var(--background-footer)
+    padding: 4rem 0
+    position: relative
+    p
+        color: var(--color-white)
+        text-align: center
+        font-size: 1.2rem
+    .copyright
+        text-align: center
+        @include breakpoint(mobile)
+            margin-bottom: 4rem
+        img
+            margin: 0 auto .8rem
+    .txtEscritorio, .txtOAB
+        color: var(--color-white)
+        text-align: center
+        font-size: 1.2rem
+        margin-bottom: .8rem
+    .txtTelefone
+        margin-bottom: 3.2rem
+    .menu__footer
+        @include breakpoint(mobile)
+            margin-bottom: 4rem
+        .nav__menu ul
+            gap: 1.6rem
+            @include flexbox
+            flex-direction: column
+            @include breakpoint(mobile)
+                text-align: center
+            a
+                color: var(--color-white)
+                font-size: 1.4rem
+                line-height: 2rem
+                transition: .4s ease all
+                display: block
+                &:hover
+                    color: var(--color-secondary)
+                    transform: scale(1.1)
+    .center
+        max-width: 1136px
+    .container__flex
+        @include justify
+        align-items: center
+        @include breakpoint(mobile)
+            @include flexwrap
+            @include center
+            flex-direction: column
+    .logoFooter
+        max-width: 189px
+        @include breakpoint(mobile)
+            margin: 0 auto 4rem
+    .nav__social ul
+        @include flexbox        
+        gap: 2.4rem
+        @include center
+        @include breakpoint(mobile)
+            @include center
+        a
+            font-size: 2.4rem
+            line-height: 3rem
+            color: var(--color-white)
+            transition: .4s ease all
+            display: block
+            &:hover
+                color: var(--color-secondary)
+                transform: scale(1.2)
+    h2
+        font-weight: $bold
+        font-size: 2rem
+        line-height: 2.4rem
+        color: var(--color-secondary)
+        margin-bottom: 1.6rem
+        @include breakpoint(mobile)
+            text-align: center

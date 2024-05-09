@@ -1,0 +1,112 @@
+.modal
+    width: 100%
+    max-width: 1136px!important
+    display: none
+    position: relative
+    background: var(--background-grey)
+    border-radius: 20px
+    .legenda
+        font-size: 1.4rem
+        line-height: 2.8rem
+        color: var(--color-black)
+        text-align: center
+        margin-bottom: 2.4rem
+
+.header__modal    
+    padding: 0
+    @incclude flexbox
+    flex-direction: column
+    text-align: center
+    margin-bottom: 3rem
+    .icon__modal
+        @include flexbox
+        @include center
+        align-items: center
+        border-radius: 50%
+        margin: 0 auto 3rem
+        i
+            font-size: 12rem
+            color: var(--color-white)
+    h2
+        font-size: 2rem
+        font-weight: $medium
+        color: var(--color-primary)
+    h3
+        font-size: 2rem
+        line-height: 3rem
+        color: var(--color-black)
+    p
+        display: none
+        margin-top: 1.6rem
+        font-size: 2rem
+        line-height: 3rem
+        color: var(--color-black)
+        @include breakpoint(mobile)
+            display: block
+
+.txt__titulo__modal
+    font-size: 2.5rem
+    line-height: 3rem
+    font-weight: $bold
+    text-align: center
+    text-transform: uppercase
+
+.txt__modal
+    font-size: 1.8rem
+    line-height: 2.5rem
+    text-align: center
+    max-width: 280px
+    margin: 1.8rem auto 5.4rem
+
+.fancybox-content
+    padding: 2.4rem!important
+    // .content
+    //     padding: 32px
+
+.fancybox-button--zoom
+    display: none!important
+
+.link__modal__visualizacao
+    color: var(--color-white)
+    font-size: 1.6rem
+    margin: 2.4rem 0 0
+    display: block
+
+
+#sucesso, #erro
+    max-width: 360px!important
+    .txt__titulo__modal
+        margin: 0 auto 5.7rem
+        color: var(--color-primary)
+        font-size: 2.4rem
+        line-height: 3.2rem
+        font-weight: $bold
+        text-transform: uppercase
+    i
+        color: var(--color-four)
+
+.btn__modal__voltar
+    font-size: 1rem
+    font-weight: $bold
+    line-height: 3.2rem
+    text-transform: uppercase
+    letter-spacing: .2rem
+    color: var(--color-black)
+    text-align: center
+    display: block
+
+.fancybox-button svg path
+    fill: var(--color-primary)!important
+
+#video
+    width: 100%
+    max-width: 385px!important
+    video, iframe
+        width: 100%
+        max-width: 500px
+        height: 600px
+
+#lock-up, #cronograma-amortizacao-apoiadores-nao-conversores, #cronograma-amortizacao-apoiadores-conversores, #cronograma-amortizacao-credor-apoiador-financeiro
+    max-height: 800px
+    .content
+        max-height: 600px

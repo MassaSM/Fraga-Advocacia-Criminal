@@ -1,0 +1,173 @@
+$bp-extralarge: 1440px //1280px
+$bp-large: 1200px//1100px
+$bp-medium: 1080px//880px
+$bp-small-medium: 767px
+$bp-small: 640px//600px
+$bp-extrasmall: 375px//400px
+
+@mixin breakpoint($point)
+	@if $point == fullhd
+		@media only screen and (max-width: $bp-extralarge)
+			@content
+	@else if $point == desktop
+		@media only screen and (max-width: $bp-large)
+			@content
+	@else if $point == tablet
+		@media only screen and (max-width: $bp-medium)
+			@content
+	@else if $point == tabletM
+		@media only screen and (max-width: $bp-small-medium)
+			@content
+	@else if $point == mobile
+		@media only screen and (max-width: $bp-small)
+			@content
+	@else if $point == iphone
+		@media only screen and (max-width: $bp-extrasmall)
+			@content
+
+@mixin flexbox
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex		
+
+@mixin flexwrap
+	-ms-flex-wrap: wrap
+	flex-wrap: wrap
+
+@mixin justify
+	-webkit-box-pack: justify
+	-ms-flex-pack: justify
+	justify-content: space-between
+
+@mixin grid
+	display: grid
+	display: -ms-grid
+	
+@mixin center
+	-webkit-box-pack: center
+	-ms-flex-pack: center
+	justify-content: center
+
+@mixin sombra
+	-webkit-appearance: none
+	-webkit-box-shadow: 3px 6px 18px 0px rgba(0,0,0,0.4)
+	-moz-box-shadow: 3px 6px 18px 0px rgba(0,0,0,0.4)
+	box-shadow: 3px 6px 18px 0px rgba(0,0,0,0.4)
+
+@mixin fixed
+	position: absolute	
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+@mixin degrade
+	background: rgb(12,24,43)!important
+	background: linear-gradient(90deg, rgba(12,24,43,1) 0%, rgba(19,41,67,1) 50%, rgba(12,24,43,1) 100%)!important
+
+@mixin dotsblue
+	.slick-next:before, .slick-prev:before
+		font-family: "Font Awesome 6 Pro"
+		font-weight: 300
+		color: $cor1
+		font-size: 3rem
+		@include flexbox
+		@include center
+		align-items: center
+	.slick-prev, .slick-next
+		z-index: 2
+		border-radius: 50%
+		border: solid 1px rgba($cor3,.2)
+		width: 78px
+		height: 78px
+		display: flex!important
+		@include center
+		align-items: center        
+	.slick-prev
+		left: -110px
+		@include breakpoint(tablet)
+			display: none
+	.slick-next
+		right: -110px
+		@include breakpoint(tablet)
+			display: none!important
+	.slick-dots li button,
+	.slick-dots li button:before
+		background: rgba($cor1,.4)
+	.slick-dots li.slick-active button:before,
+	.slick-dots li.slick-active button:before
+		color: $cor1!important
+		background: $cor1!important
+
+@mixin dots
+	.slick-next:before, .slick-prev:before
+		font-family: "Font Awesome 6 Pro"
+		font-weight: 900
+		color: var(--color-four)
+		font-size: 3rem
+		@include flexbox
+		@include center
+		align-items: center
+	.slick-prev
+		left: -72px
+		@include breakpoint(tablet)
+			display: none!important
+	.slick-next
+		right: -72px
+		@include breakpoint(tablet)
+			display: none!important
+	.slick-prev:before		
+		content: '\f053'
+	.slick-next:before
+		content: '\f054'
+
+@mixin noticiasGrid
+	@include grid
+	grid-template-columns: repeat(3,1fr)
+	gap: 4.2rem
+	@include breakpoint(tablet)
+		grid-template-columns: repeat(2,1fr)
+	@include breakpoint(mobile)
+		grid-template-columns: 1fr
+
+@mixin noticias
+	.item__noticia
+		transition: .4s ease all
+		&:hover
+			transform: scale(1.01)
+	.img__noticia
+		margin-bottom: 3rem
+		img
+			max-width: 100%
+			border-radius: 20px
+	.descricao__noticia
+		.noticia__autor
+			font-size: 1.4rem
+			font-weight: $medium
+			color: var(--color-black)
+			letter-spacing: .2
+			margin-bottom: 1rem
+			text-transform: uppercase
+		.noticia__titulo
+			font-size: 2.4rem
+			line-height: 3.6rem
+			font-weight: $medium
+			color: var(--color-black)		
+			margin-bottom: 2.4rem	
+			display: block
+			display: -webkit-box
+			-webkit-line-clamp: 3
+			-webkit-box-orient: vertical
+			overflow: hidden
+			text-overflow: ellipsis
+			min-height: 108px
+			@include breakpoint(mobile)
+				min-height: auto
+	.link__saiba__mais
+		font-size: 1.6rem
+		line-height: 2.4rem
+		font-weight: $medium
+		color: var(--color-four)
+		text-transform: uppercase
+		transition: .4s ease all
+		&:hover
+			color: var(--color-primary)

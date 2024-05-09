@@ -1,0 +1,550 @@
+section.banner
+    min-height: 720px
+    @include flexbox
+    align-items: center
+    margin-top: -9.5rem
+    position: relative
+    padding-top: 14rem
+    overflow: hidden
+    @include breakpoint(mobile)
+        min-height: 540px
+        padding-bottom: 12rem
+    .center
+        max-width: 1136px
+        position: relative
+        z-index: 1
+        margin-top: -4rem
+    .container__flex
+        gap: 17.2rem
+        align-items: center
+        @include breakpoint(tablet)
+            @include flexwrap
+            @include center
+            gap: 4rem
+    
+    .logoBanner
+        max-width: 100%
+        margin: 0 auto
+        @include breakpoint(mobile)
+            max-width: 80%
+            margin: 2.4rem auto 0
+    .video__bg
+        position: absolute
+        top: 0px
+        left: 0
+        object-fit: cover
+        right: 0
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+        &:before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(0,0,0,.3)
+        video
+            width: 100vw
+            height: 720px
+            object-fit: cover
+            position: relative
+            z-index: -1
+    .container__texto__banner
+        max-width: 530px
+        h2
+            font-size: 4rem
+            line-height: 6rem
+            color: var(--color-white)
+            margin-bottom: 4.4rem
+            @include breakpoint(tablet)
+                text-align: center
+            @include breakpoint(mobile)
+                font-size: 3.2rem
+                line-height: 4rem
+            span
+                font-weight: $semibold
+    .icon__down
+        font-size: 3.2rem
+        color: var(--color-white)
+        text-align: center
+        position: absolute
+        bottom: 2.4rem
+        margin-left: auto
+        margin-right: auto
+        left: 0
+        right: 0
+        z-index: 1
+        animation: pulsar 2s infinite
+        border-radius: 33px
+        width: max-content        
+        i
+            transition: .4s ease all
+            border-radius: 50%
+            &:hover
+                transform: scale(1.2)
+                -webkit-box-shadow: 0px 0px 50px 20px rgba(255, 255, 255, 0.66)
+                -moz-box-shadow: 0px 0px 50px 20px rgba(255, 255, 255, 0.66)
+                box-shadow: 0px 0px 50px 20px rgba(255, 255, 255, 0.66)
+                transform: scale(1.1)
+        @include breakpoint(mobile)
+            bottom: 4rem
+
+section.banner__advogado
+    background: url(../../images/banner-advogado.jpg) center top no-repeat
+    background-size: cover
+    background-attachment: fixed
+    padding: 6.4rem 0
+    position: relative
+    &:before
+        content: ''
+        background: rgba(0,0,0,.4)
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        position: absolute
+    .container__flex
+        @include center
+        align-items: center
+        min-height: 480px    
+    .center
+        position: relative
+    img
+        max-width: 100%
+
+section.membros__equipe
+    padding: 10rem 0 8.4rem
+    background: url(../../images/bgAdvogados.jpg) center top no-repeat
+    background-size: cover
+    position: relative
+    margin: 8rem 0
+    &:before
+        content: ''
+        background: rgba(0,0,0,.6)
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        position: absolute
+    .center
+        position: relative
+    .header
+        text-align: center
+        margin-bottom: 9.2rem
+        .title
+            font-size: 4.8rem
+            line-height: 5rem
+            color: var(--color-white)
+            font-weight: $medium
+            padding-bottom: 3rem
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                width: 48px
+                height: 7px
+                background: var(--color-secondary)
+                border-radius: 6px
+                bottom: 0px
+                margin-left: auto
+                margin-right: auto
+                left: 0
+                right: 0
+    .container__flex
+        @include center
+        gap: 16rem
+        @include breakpoint(mobile)
+            @include flexwrap
+    .item__advogado
+        img
+            border-radius: 50%
+            margin: 0 auto 2.4rem
+        .dados__advogado
+            text-align: center
+            h2
+                font-size: 2.4rem
+                line-height: 3rem
+                color: var(--color-white)
+                margin-bottom: 1.6rem
+                font-weight: $bold
+                i
+                    margin-right: .8rem
+            p
+                font-size: 1.6rem
+                line-height: 2.4rem
+                color: var(--color-white)
+
+            
+section.sobre__nos
+    padding: 18rem 0
+    .header__sobre
+        margin-bottom: 5.2rem
+        h2
+            font-size: 4rem
+            line-height: 4.4rem
+            color: var(--color-primary)
+            text-align: center
+            font-weight: $bold
+            padding-bottom: 3rem
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                width: 48px
+                height: 7px
+                background: var(--color-secondary)
+                border-radius: 6px
+                bottom: 0px
+                margin-left: auto
+                margin-right: auto
+                left: 0
+                right: 0
+                text-align: center
+        p
+            margin-top: 1.6rem
+            margin-bottom: 0
+            text-align: center
+            color: var(--color-white)
+    .texto
+        padding: 0 6rem
+        position: relative
+        i
+            position: absolute
+            font-size: 4.8rem
+            color: var(--color-primary)
+            &:first-child
+                top: -20px
+                left: 0
+            &:last-child
+                bottom: -10px
+                right: 0
+        p
+            font-size: 1.8rem
+            line-height: 3rem
+            text-align: justify
+
+section.areas__de__atuacao
+    padding: 10rem 0 8.4rem
+    .header__areas
+        text-align: center
+        margin-bottom: 4rem
+        .title
+            font-size: 4.8rem
+            line-height: 5rem
+            color: var(--color-primary)
+            font-weight: $medium
+            padding-bottom: 3rem
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                width: 48px
+                height: 7px
+                background: var(--color-secondary)
+                border-radius: 6px
+                bottom: 0px
+                margin-left: auto
+                margin-right: auto
+                left: 0
+                right: 0
+                text-align: center
+    .container__areas
+        @include grid
+        grid-template-columns: repeat(2,1fr)
+        gap: 1.6rem
+        margin: 0 auto
+        @include breakpoint(tabletM)
+            display: block
+        .item__area
+            padding: 8rem 2rem
+            border: solid 2px var(--color-primary)
+            border-radius: 8px
+            text-align: center
+            font-size: 2.4rem
+            font-weight: $bold
+            line-height: 3.2rem
+            position: relative
+            transition: all 0.3s
+            cursor: pointer
+            @include breakpoint(tabletM)
+                min-height: 252px
+            &:hover
+                box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2) inset                
+                .front
+                    display: none
+                .txtHover
+                    display: block
+                &::after
+                    background-color: rgba(22, 22, 22, 0.6)
+            
+            i
+                font-size: 6rem
+                color: var(--color-primary)
+                margin-bottom: 2.4rem
+            .txtHover
+                font-size: 1.6rem
+                line-height: 2.8rem
+                font-weight: $regular
+                display: none
+                left: 50%
+                position: absolute
+                text-align: center
+                top: 50%
+                transform: translate(-50%, -50%)
+                transition: all 0.3s ease 0s
+                width: 80%
+                z-index: 1
+                
+
+section.faq
+    padding: 10rem 0 8.4rem
+    background: url(../../images/fundo-perguntas.jpg) center top no-repeat
+    border-top-left-radius: 100px
+    background-size: cover
+    position: relative
+    &:before
+        content: ''
+        background: rgba(0,0,0,.6)
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        position: absolute
+        border-top-left-radius: 100px
+    .header__faq
+        text-align: center
+        margin-bottom: 9.2rem
+        .title
+            font-size: 4.8rem
+            line-height: 5rem
+            color: var(--color-white)
+            font-weight: $medium
+            padding-bottom: 3rem
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                width: 48px
+                height: 7px
+                background: var(--color-secondary)
+                border-radius: 6px
+                bottom: 0px
+                margin-left: auto
+                margin-right: auto
+                left: 0
+                right: 0
+                text-align: center
+    summary
+        display: block
+        padding: 3rem 5.4rem
+        background: var(--color-white)
+        font-size: 2rem
+        font-weight: $medium
+        color: var(--color-black)  
+        line-height: 2.4rem
+        cursor: pointer
+        @include breakpoint(mobile)
+            padding: 3rem 5rem 3rem 3rem
+    summary::after
+        margin-left: 1ch
+        display: inline-block
+        content: '\2b'
+        font-family: 'Font Awesome 6 Pro'
+        font-weight: 900
+        transition: 0.2s
+        position: absolute
+        right: 3rem
+        font-size: 2.8rem
+        color: var(--color-primary)
+        transition: .4s ease all
+        @include breakpoint(mobile)
+            top: 40px
+            right: 2rem
+    details
+        position: relative
+        transition: .4s ease all
+
+    details[open] > summary::after
+        content: '\f068'
+
+    details[open] > summary
+        color: var(--color-primary)
+
+    details:not(:last-child) 
+        margin-bottom: 8px
+    details p 
+        line-height: 2.8rem
+        background: #F8F8F8
+        padding: 35px 54px 42px
+        margin-top: -4px
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+        font-size: 1.6rem
+        color: #000000
+        @include breakpoint(mobile)
+            padding: 3.5rem 3rem
+    details:last-child summary 
+        border-bottom-left-radius: 60px
+
+    details:first-child summary 
+        border-top-left-radius: 60px
+    details:last-child p
+        border-top-left-radius: 60px
+
+section.nossos__numeros
+    background: url(../../images/nossos-numeros.jpg) center center no-repeat
+    background-size: cover
+    padding: 10rem 0
+    margin: 6rem 0
+    .header__numeros
+        text-align: center
+        margin-bottom: 6rem
+        h2
+            font-size: 4.8rem
+            line-height: 5rem
+            color: var(--color-white)
+            font-weight: $medium
+            padding-bottom: 3rem
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                width: 48px
+                height: 7px
+                background: var(--color-secondary)
+                border-radius: 6px
+                bottom: 0px
+                margin-left: auto
+                margin-right: auto
+                left: 0
+                right: 0
+                text-align: center
+    .container__numeros
+        @include flexbox
+        @include center
+        gap: 6.4rem
+        color: var(--color-white)
+        @include breakpoint(tablet)
+            @include flexwrap
+        .item__numero
+            text-align: center
+            @include breakpoint(mobile)
+                width: 100%
+            .container__box
+                @include center
+                @include flexbox
+                flex-direction: column
+                align-items: center
+                gap: 1rem
+                font-size: 4rem
+                font-weight: $bold
+                .number
+                    font-size: 10rem
+                    color: var(--color-white)
+            .descricao
+                margin-top: 2.4rem
+                font-size: 2.4rem
+
+section.contato
+    background: url(../../images/contato.jpg) center top no-repeat
+    background-size: cover
+    padding: 10.5rem 0 13.2rem
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        background: rgba(0,0,0,.6)
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    .center
+        position: relative
+    .container__flex
+        @include justify
+        gap: 2.4rem
+        @include flexwrap           
+        .box__content
+            width: 100%
+            max-width: initial
+            a
+                color: var(--color-primary)
+        .box__form
+            width: 100%
+            max-width: 560px
+            margin: 0 auto
+            @include breakpoint(tablet)
+                max-width: initial
+            a
+                color: var(--color-primary)
+                transition: .4s ease all
+                &:hover
+                    color: var(--color-four)
+    .header__contato
+        margin-bottom: 5.2rem
+        h2
+            font-size: 4.8rem
+            line-height: 4.4rem
+            color: var(--color-white)
+            text-align: center
+            font-weight: $bold
+        p
+            font-size: 2.4rem
+            line-height: 3.2rem
+            margin-top: 2.4rem
+            margin-bottom: 0
+            text-align: center
+            color: var(--color-white)
+    p
+        font-size: 1.6rem
+        line-height: 2.8rem
+        color: var(--color-black)
+        margin-bottom: 3rem
+    .container__btn
+        @include flexbox
+        gap: 1.6rem
+        @include breakpoint(mobile)
+            @include flexwrap
+    .btn__submit
+        margin: 0 auto
+        display: block
+    label
+        color: var(--color-white)
+
+section.localizacao
+    padding: 10rem 0
+    .header__localizacao
+        text-align: center
+        margin-bottom: 2.4rem
+        h2
+            font-size: 4.8rem
+            line-height: 5rem
+            color: var(--color-primary)
+            font-weight: $medium
+            padding-bottom: 3rem
+            position: relative
+            margin-bottom: 3.2rem
+            &:before
+                content: ''
+                position: absolute
+                width: 48px
+                height: 7px
+                background: var(--color-primary)
+                border-radius: 6px
+                bottom: 0px
+                margin-left: auto
+                margin-right: auto
+                left: 0
+                right: 0
+                text-align: center
+        p
+            font-size: 2rem
+            line-height: 3rem
+        i
+            font-size: 3rem
+            margin-right: .8rem
+            color: var(--color-primary)
+    iframe
+        border-radius: 1.6rem
