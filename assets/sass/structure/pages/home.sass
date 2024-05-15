@@ -179,6 +179,91 @@ section.membros__equipe
                 line-height: 2.4rem
                 color: var(--color-white)
 
+
+section.local__atuacao
+    background: #1F1F1F
+    padding: 10rem 0 8.4rem
+    margin: 8rem 0
+    .header
+        text-align: center
+        margin-bottom: 9.2rem
+        .title
+            font-size: 4.8rem
+            line-height: 5rem
+            color: var(--color-white)
+            font-weight: $medium
+            padding-bottom: 3rem
+            position: relative
+            margin-bottom: 3.2rem
+            &:before
+                content: ''
+                position: absolute
+                width: 48px
+                height: 7px
+                background: var(--color-secondary)
+                border-radius: 6px
+                bottom: 0px
+                margin-left: auto
+                margin-right: auto
+                left: 0
+                right: 0
+        p
+            font-size: 2.4rem
+            line-height: 3rem
+            color: var(--color-white)
+            font-weight: $regular
+            span
+                font-weight: $bold
+    #mapa-svg-sotreq
+        display: block
+        margin: 0 auto
+        width: 100%
+        max-width: 800px
+    .mapa-svg-estados 
+        fill: #373737
+        -webkit-transition: .8s ease
+        -moz-transition: .8s ease
+        -ms-transition: .8s ease
+        -o-transition: .8s ease
+        transition: .8s ease
+        stroke: transparent
+        stroke-dasharray: 180%
+        stroke-dashoffset: -120%
+        stroke-width: 2px
+    .mapa-svg-estados-active 
+        cursor: pointer
+        stroke: #0098ff
+        fill: #525252
+        stroke-dashoffset: 0%
+    .pointer-svg-map 
+        fill: #0098ff
+        /*opacity: 0*/
+        /*animation: pointer 2s infinite linear*/
+        animation-direction: normal
+        /*transform:translateY(-550px)*/
+        animation-delay: .2s
+    .inactive-map-svg 
+        opacity: .5
+        stroke: none !important
+    .inactive-map-svg:hover 
+        stroke-dashoffset: -120%
+        cursor: inherit
+        fill: #525252    
+    @keyframes pointer 
+        from 
+            opacity: 0
+        
+        to 
+            opacity: 1
+            transform: translateY(0px)
+    .class-select
+        height: 40px
+        width: 250px
+        padding: 10px 18px
+        border-radius: 32px
+        color: #3c3c3c
+    
+
             
 section.sobre__nos
     padding: 18rem 0
@@ -263,6 +348,7 @@ section.areas__de__atuacao
         .item__area
             padding: 8rem 2rem
             border: solid 2px var(--color-primary)
+            background: var(--color-white)
             border-radius: 8px
             text-align: center
             font-size: 2.4rem
@@ -270,11 +356,14 @@ section.areas__de__atuacao
             line-height: 3.2rem
             position: relative
             transition: all 0.3s
-            cursor: pointer
+            cursor: pointer            
             @include breakpoint(tabletM)
                 min-height: 252px
             &:hover
-                box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2) inset                
+                z-index: 1
+                box-shadow: 0px 0px 40px 20px rgba(1,101,231,0.9)
+                transform: scale(1.1)
+                // box-shadow: 0 0 0 25px rgba(0, 0, 0, 0.2) inset                
                 .front
                     display: none
                 .txtHover
@@ -446,6 +535,8 @@ section.nossos__numeros
                 .number
                     font-size: 10rem
                     color: var(--color-white)
+                    @include breakpoint(mobile)
+                        font-size: 6rem
             .descricao
                 margin-top: 2.4rem
                 font-size: 2.4rem
@@ -493,6 +584,8 @@ section.contato
             color: var(--color-white)
             text-align: center
             font-weight: $bold
+            @include breakpoint(mobile)
+                font-size: 3.2rem
         p
             font-size: 2.4rem
             line-height: 3.2rem
